@@ -6,7 +6,7 @@ import FormLoader from "../../FormLoader";
 import LoginInput from "../../input/login";
 import Card from "../../UI/Card/Card";
 import styles from "./CreateGroup.module.css";
-import classes from "./../SearchUser.module.css";
+import classes from "../SearchUser.module.css";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useState } from "react";

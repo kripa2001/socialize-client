@@ -191,7 +191,7 @@ function FriendsPage() {
                 )}
                 {data?.data.friendLists && data?.data.friendLists.length > 0
                   ? data?.data.friendLists.map((user) => (
-                      <FriendCard user={user} key={user._id} type="friends" />
+                      <FriendCard user={user} key={user?._id} type="friends" />
                     ))
                   : isSuccess && !isLoading && <p>No friends</p>}
               </div>

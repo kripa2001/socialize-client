@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./ErrorPage.module.css";
-import e404Animation from "../../UI/Lottie/404.json";
+import e404Animation from "../Lottie/404.json";
 import Lottie from "react-lottie-player";
 import { useNavigate } from "react-router-dom";
 

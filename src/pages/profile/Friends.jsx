@@ -6,6 +6,9 @@ import PuffLoader from "react-spinners/PuffLoader";
 import Skeleton from "react-loading-skeleton";
 
 function Friends({ userData, userFriends, photosSkelton }) {
+
+  console.log(userData, userFriends, photosSkelton);
+
   return (
     <Card>
       <div className={classes.card_header}>
@@ -27,16 +30,16 @@ function Friends({ userData, userFriends, photosSkelton }) {
             <PuffLoader color="#1876f2" loading={photosSkelton} size={40} />
           </div>
         ) : (
-          <div className={classes.friends_grid}>
+          <div className={classes?.friends_grid}>
             {userFriends &&
               userFriends.slice(0, 9).map((user, i) => (
-                <Link to={`/profile/${user.username}`} key={i}>
+                <Link to={`/profile/${user?.username}`} key={i}>
                   <div
-                    className={classes.friend_card}
-                    style={{ backgroundImage: `url(${user.photo})` }}
+                    className={classes?.friend_card}
+                    style={{ backgroundImage: `url(${user?.photo})` }}
                   ></div>
-                  <span className={classes.friend_name}>
-                    {user.first_name} {user.last_name}{" "}
+                  <span className={'asdf'}>
+                    {user?.first_name} {user?.last_name}{" "}
                     {user?.confirmed && (
                       <i
                         style={{ marginLeft: "5px" }}

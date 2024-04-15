@@ -4,7 +4,10 @@ import { useRelationship } from "../../hooks/useRealationship";
 import classes from "./style.module.css";
 
 export default function FriendCard({ user, type, requestId, refetch }) {
-  const { mutate, data } = useRelationship(user.username);
+
+  console.log(user);
+
+  const { mutate, data } = useRelationship(user?.username);
 
   const acceptRequest = async (requestId) => {
     mutate({ id: requestId, type: "acceptRequest" });
@@ -20,12 +23,12 @@ export default function FriendCard({ user, type, requestId, refetch }) {
     }
   }, [data]);
 
-  return (
-    <div className={classes.req_card}>
-      <Link to={`/profile/${user.username}`} className={classes.photo}>
-        <img src={user.photo} alt="" />
-        <div className={classes.req_name}>
-          {user.first_name} {user.last_name}
+  return  (
+     <div className={classes.req_card}>
+      <Link to={`/profile/${user?.username}`} className={classes?.photo}>
+        <img src={user?.photo} alt="" />
+        <div className={classes?.req_name}>
+          {user?.first_name} {user?.last_name}
         </div>
       </Link>
       {type === "sent" ? (
