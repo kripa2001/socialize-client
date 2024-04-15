@@ -69,7 +69,7 @@ function Header() {
             ref={input}
             type="text"
             name="search"
-            placeholder="Search Backbook"
+            placeholder="Search Socialize"
             className={styles.input}
             onFocus={() => {
               setShowIcon(false);

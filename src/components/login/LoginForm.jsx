@@ -62,7 +62,7 @@ function LoginForm({ setRenderSignUp }) {
       <div className={styles.header}>
         <img src="../../icons/backbook.svg" alt="" />
         <span>
-          Backbook helps you connect and share with the people in your life.
+          Socialize helps you connect and share with the people in your life.
         </span>
       </div>
       <div className={styles.login}>
