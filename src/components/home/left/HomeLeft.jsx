@@ -3,7 +3,7 @@ import { left } from "../../../data/home";
 import { Link } from "react-router-dom";
 import { ArrowDown1 } from "../../../svg";
 import { useState } from "react";
-import Shortcut from "./Shortcut";
+// import Shortcut from "./Shortcut";
 import styles from "./HomeLeft.module.css";
 
 export default function HomeLeft({ user }) {
@@ -64,7 +64,7 @@ export default function HomeLeft({ user }) {
         </div>
       )}
       <div className={styles.splitter}></div>
-      <div className={styles.shortcut}>
+      {/* <div className={styles.shortcut}>
         <div className={styles.heading}>Shortcuts</div>
         <div className={styles.edit_shortcut}>Edit</div>
       </div>
@@ -80,26 +80,16 @@ export default function HomeLeft({ user }) {
           img="../../images/linkedin.png"
           name="Linkedin "
         />
-      </div>
+      </div> */}
       <div
         className={`${styles.fb_copyright} ${
           visible && styles.relative_fb_copyright
         }`}
       >
         <Link to="/">Privacy </Link>
-        <span>. </span>
-        <Link to="/">Terms </Link>
-        <span>. </span>
-        <Link to="/">Advertising </Link>
-        <span>. </span>
-        <Link to="/">
-          Ad Choices <i className={styles.ad_choices_icon}></i>{" "}
-        </Link>
-        <span>. </span>
-        <Link to="/"></Link>Cookies <span>. </span>
-        <Link to="/">More </Link>
-        <span>. </span> <br />
-        Backbook © 2022
+
+        <span> | </span>
+        Socialize © 2022
       </div>
     </div>
   );

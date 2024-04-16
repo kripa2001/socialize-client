@@ -59,7 +59,7 @@ export default function UserMenu({ user, setShowUserMenu }) {
             </div>
           </Link>
           <div className={styles.mmenu_splitter}></div>
-          <div className={`${styles.mmenu_main} hover3`}>
+          {/* <div className={`${styles.mmenu_main} hover3`}>
             <div className={styles.small_circle}>
               <i className="report_filled_icon"></i>
             </div>
@@ -67,8 +67,8 @@ export default function UserMenu({ user, setShowUserMenu }) {
               <div className={styles.mmenu_span1}>Give feedback</div>
               <div className={styles.mmenu_span2}>Help us improve facebook</div>
             </div>
-          </div>
-          <div className={styles.mmenu_splitter}></div>
+          </div> */}
+          {/* <div className={styles.mmenu_splitter}></div>
           <div
             className={`${styles.mmenu_item} hover3`}
             onClick={() => {
@@ -110,7 +110,7 @@ export default function UserMenu({ user, setShowUserMenu }) {
             <div className={styles.rArrow}>
               <i className="right_icon"></i>
             </div>
-          </div>
+          </div> */}
           <div
             className={`${styles.mmenu_item} hover3 click`}
             onClick={() => {

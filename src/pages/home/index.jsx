@@ -147,7 +147,7 @@ function Home() {
       <HomeLeft user={user} />
       <HomeRight user={user} />
       <div className={styles.home_middle}>
-        <Stories />
+        {/* <Stories /> */}
         {token && !user.verified && <ActivateAccount token={token} />}
         {!user.verified && <SendVerification />}
         <CreatePost user={user} />

@@ -54,7 +54,10 @@ function Header() {
       <div className={styles.left}>
         <Link to="/" className={styles.logo}>
           <div className={styles.circle}>
-            <Logo width={200} />
+            {/* <Logo width={200} /> */}
+            <img src="https://cdn-icons-png.flaticon.com/512/831/831366.png" width={30} alt="" />
+            {/* <h2>SB</h2> */}
+
           </div>
         </Link>
         <div
@@ -137,12 +140,12 @@ function Header() {
             9+
           </div>
         </Link>
-        <Link to="/" className={`${styles.middle_icon} hover1`}>
+        {/* <Link to="/" className={`${styles.middle_icon} hover1`}>
           <Market color={color} />
         </Link>
         <Link to="/" className={`${styles.middle_icon} hover1`}>
           <Gaming color={color} />
-        </Link>
+        </Link> */}
       </div>
       <div className={styles.right}>
         <NavLink
@@ -158,7 +161,7 @@ function Header() {
           <img src={user?.photo} alt={user?.username} className="shadow" />
           <span>{user?.first_name}</span>
         </NavLink>
-        <div ref={allmenu}>
+        {/* <div ref={allmenu}>
           <div
             className={`${styles.circle_icon}  ${
               showAllMenu && styles.active_header
@@ -173,7 +176,7 @@ function Header() {
           </div>
 
           {showAllMenu && <AllMenu />}
-        </div>
+        </div> */}
         <NavLink
           to="/messages"
           className={({ isActive }) =>

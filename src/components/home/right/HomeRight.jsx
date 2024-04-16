@@ -7,8 +7,8 @@ function HomeRight({ user }) {
 
   return (
     <div className={styles.right_home}>
-      <div className={styles.heading}>Sponsored</div>
-      <div className={styles.splitter}></div>
+      {/* <div className={styles.heading}>Sponsored</div> */}
+      {/* <div className={styles.splitter}></div> */}
       <div className="contacts_wrap">
         <div className={styles.contacts_header}>
           <div className={styles.contacts_header_left}>Contacts</div>
