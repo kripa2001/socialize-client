@@ -60,7 +60,12 @@ function LoginForm({ setRenderSignUp }) {
   return (
     <main className={styles.main}>
       <div className={styles.header}>
-        <img src="../../icons/backbook.svg" alt="" />
+        {/* <img src="../../icons/backbook.svg" alt="" /> */}
+        <h1 style={{
+          fontSize: "50px",
+        }}>Socialize Pro</h1>
+          <br />
+
         <span>
           Socialize helps you connect and share with the people in your life.
         </span>
