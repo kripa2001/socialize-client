@@ -25,26 +25,56 @@ a {
   color: inherit;
 }
 
+/* --app-height: 100vh;
+
+--bg-primary: #fff6f6;
+--bg-secondary: #f0f2f5;
+--bg-third: #e4e6eb;
+--bg-forth: #f0f2f5;
+--color-primary: #050505;
+--color-secondary: #65676b;
+--divider: #d6d7d9;
+--dark-bg-primary: #18191a;
+--dark-bg-secondary: #242526;
+--dark-bg-third: #3a3b3c;
+--dark-bg-forth: #3a3b3c;
+--dark-color-primary: #242526;
+--dark-color-secondary: #b0b3b8;
+--red-color: #ff443b;
+--blue-color: #0096ff;
+--light-blue-color: #0096ff21;
+--blue: #1876f2;
+--green-color: #42b72a;
+--light-blue-color: #e7f3ff;
+--border-color: #ccced2;
+--shadow-1: rgba(0, 0, 0, 0.1);
+--shadow-2: rgba(0, 0, 0, 0.2);
+--shadow-5: rgba(0, 0, 0, 0.5);
+--shadow-8: rgba(0, 0, 0, 0.8);
+--shadow-inset: rgba(255, 255, 255, 0.5);
+--color-error: #b94a48;
+} */
+
 :root {
   --app-height: 100vh;
 
-  --bg-primary: #fff;
+  --bg-primary: #f5f5f5;
   --bg-secondary: #f0f2f5;
   --bg-third: #e4e6eb;
-  --bg-forth: #f0f2f5;
-  --color-primary: #050505;
+  --bg-forth: #53526d24;
+  --color-primary: #363062;
   --color-secondary: #65676b;
-  --divider: #d6d7d9;
+  --divider: #4d4c7d;
   --dark-bg-primary: #18191a;
   --dark-bg-secondary: #242526;
   --dark-bg-third: #3a3b3c;
   --dark-bg-forth: #3a3b3c;
   --dark-color-primary: #242526;
-  --dark-color-secondary: #b0b3b8;
+  --dark-color-secondary: #f99417;
   --red-color: #ff443b;
   --blue-color: #0096ff;
   --light-blue-color: #0096ff21;
-  --blue: #1876f2;
+  --blue: #181ff2a7;
   --green-color: #42b72a;
   --light-blue-color: #e7f3ff;
   --border-color: #ccced2;
