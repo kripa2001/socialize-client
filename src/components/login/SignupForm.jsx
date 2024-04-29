@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import Card from "../UI/Card/Card";
 import FormLoader from "../FormLoader";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
+import toast from "react-hot-toast";
 
 function SignupForm({ setRenderSignUp, renderSignUp }) {
   const dispatch = useDispatch();
@@ -54,7 +55,7 @@ function SignupForm({ setRenderSignUp, renderSignUp }) {
       .min(2)
       .matches(
         /^([a-zA-Z]+\s)*[a-zA-Z]+$/,
-        "You can use english charcters only"
+        "You can use english charcters only",
       ),
     last_name: Yup.string()
       .required("What's your last name?")
@@ -62,11 +63,11 @@ function SignupForm({ setRenderSignUp, renderSignUp }) {
       .min(2)
       .matches(
         /^([a-zA-Z]+\s)*[a-zA-Z]+$/,
-        "You can use english charcters only"
+        "You can use english charcters only",
       ),
     email: Yup.string()
       .required(
-        "You'll need this when you log in and if you ever need to reset your password."
+        "You'll need this when you log in and if you ever need to reset your password.",
       )
       .email("Must be a valid email.")
       .max(100),
@@ -75,14 +76,14 @@ function SignupForm({ setRenderSignUp, renderSignUp }) {
       .min(6)
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#_$%^&*])(?=.{6,})/,
-        "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character"
+        "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character",
       ),
     passwordConfirm: Yup.string().test(
       "passwords-match",
       "Password confirm must match password !",
       function (value) {
         return this.parent.password === value;
-      }
+      },
     ),
     gender: Yup.string().required("Gender is required"),
   });
@@ -105,7 +106,7 @@ function SignupForm({ setRenderSignUp, renderSignUp }) {
         },
         {
           withCredentials: true,
-        }
+        },
       );
       setError("");
       setSuccess(data.status);
@@ -117,6 +118,7 @@ function SignupForm({ setRenderSignUp, renderSignUp }) {
     } catch (error) {
       setLoading(false);
       setSuccess("");
+      toast.error(error.response.data.message, { duration: 4000 });
       setError(error.response.data.message);
     }
   };
@@ -153,18 +155,18 @@ function SignupForm({ setRenderSignUp, renderSignUp }) {
             const picked_date = new Date(
               values.birth_Year,
               values.birth_Month - 1,
-              values.birth_Day
+              values.birth_Day,
             );
 
             let atleast14 = new Date(1970 + 14, 0, 1);
             let noMoreThan70 = new Date(1970 + 70, 0, 1);
             if (current_date - picked_date < atleast14) {
               setDateError(
-                "it looks like you(ve enetered the wrong info.Please make sure that you use your real date of birth."
+                "it looks like you(ve enetered the wrong info.Please make sure that you use your real date of birth.",
               );
             } else if (current_date - picked_date > noMoreThan70) {
               setDateError(
-                "it looks like you've enetered the wrong info.Please make sure that you use your real date of birth."
+                "it looks like you've enetered the wrong info.Please make sure that you use your real date of birth.",
               );
             } else {
               setDateError(false);
@@ -242,7 +244,7 @@ function SignupForm({ setRenderSignUp, renderSignUp }) {
                     Sign up
                   </button>
                 </div>
-                {error && <div className={styles.error_text}>{error}</div>}
+                {/* {error && <div className={styles.error_text}>{error}</div>} */}
                 {success && (
                   <div className={styles.success_text}>{success}</div>
                 )}
