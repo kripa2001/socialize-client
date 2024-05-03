@@ -144,12 +144,12 @@ function Home() {
 
   return (
     <div className={styles.home}>
-      <HomeLeft user={user} />
+      {/* <HomeLeft user={user} /> */}
       <HomeRight user={user} />
       <div className={styles.home_middle}>
         {/* <Stories /> */}
-        {token && !user.verified && <ActivateAccount token={token} />}
-        {!user.verified && <SendVerification />}
+        {/* {token && !user.verified && <ActivateAccount token={token} />} */}
+        {/* {!user.verified && <SendVerification />} */}
         <CreatePost user={user} />
         <div className={styles.posts}>
           {postsSkeleton && (

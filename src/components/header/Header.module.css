@@ -82,7 +82,7 @@
   gap: 6px;
   background: var(--bg-forth);
   padding: 10px 20px 10px 13px;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   cursor: text;
   min-width: 233px;
 }
@@ -156,7 +156,7 @@
   position: relative;
   height: 40px;
   width: 40px;
-  border-radius: 50%;
+  border-radius: 20%;
   display: flex;
   align-items: center;
   justify-content: center;

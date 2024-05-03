@@ -75,6 +75,7 @@
   width: 50%;
   font-size: 14px;
   font-weight: 600;
+  /* padding: 10px; */
 }
 .no_posts {
   display: flex;

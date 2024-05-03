@@ -22,7 +22,7 @@
   padding: 8px;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 4px;
   gap: 2px;
   min-width: 170px;
   max-width: max-content;

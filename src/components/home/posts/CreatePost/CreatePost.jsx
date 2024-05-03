@@ -13,24 +13,24 @@ function CreatePost({ user, profile }) {
       <div className={styles.header}>
         <img src={user?.photo} alt="" />
         <div
-          className={`${styles.open_post} hover2`}
+          className={`${styles.open_post}`}
           onClick={() => {
             dispatch(createPostSlice.open());
           }}
         >
           {createPost.postText
             ? createPost.postText
-            : ` What's on your mind, ${user?.first_name}`}
+            : `Express your mind, ${user?.first_name}`}
         </div>
       </div>
-      <div className={styles.splitter} />
+      {/* <div className={styles.splitter} /> */}
       <div className={styles.post_body}>
-        <div className={`${styles.createPost_icon} hover1`}>
+        {/* <div className={`${styles.createPost_icon} hover1`}>
           <LiveVideo color="#f3425f" />
           Live Video
-        </div>
+        </div> */}
 
-        <div
+        {/* <div
           className={`${styles.createPost_icon} hover1`}
           onClick={() => {
             dispatch(createPostSlice.open("photo"));
@@ -38,8 +38,8 @@ function CreatePost({ user, profile }) {
         >
           <Photo color="#4bbf67" />
           Photo/Video
-        </div>
-        {profile ? (
+        </div> */}
+        {/* {profile ? (
           <div className="createPost_icon hover1">
             <i className="lifeEvent_icon"></i>
             Life Event
@@ -49,7 +49,7 @@ function CreatePost({ user, profile }) {
             <Feeling color="#f7b928" />
             Feeling/Activity
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

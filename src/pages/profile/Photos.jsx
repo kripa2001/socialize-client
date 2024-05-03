@@ -8,18 +8,19 @@ import Skeleton from "react-loading-skeleton";
 function Photos({ photosData, photosSkelton }) {
   return (
     <Card className={classes.photos}>
-      <div className={classes.card_header}>
+      {/* <div className={classes.card_header}>
         Photos
         <Link className={classes.link} to="#">
           See all photos
         </Link>
-      </div>
+      </div> */}
       <div className={classes.content}>
         <div className={classes.info}>
           {photosSkelton ? (
             <Skeleton width={80} height={10} />
           ) : (
-            `${photosData.total_count} photos`
+            // `${photosData.total_count} photos`
+            ``
           )}
         </div>
 

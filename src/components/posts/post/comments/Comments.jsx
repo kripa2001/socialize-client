@@ -73,14 +73,14 @@ function Comments({
         </>
       ) : (
         <>
-          <div
+          {/* <div
             className={classes.view_more}
             onClick={() => {
               commentRef.current.focus();
             }}
           >
             Write a comment...
-          </div>
+          </div> */}
         </>
       )}
     </div>

@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import styles from "./Header.module.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { AiFillMessage } from "react-icons/ai";
+import { RiNotificationBadgeFill } from "react-icons/ri";
 
 import {
   ArrowDown,
@@ -90,7 +92,7 @@ function Header() {
         />
       )}
       <div className={styles.middle}>
-        <NavLink
+        {/* <NavLink
           to="/"
           className={({ isActive }) =>
             isActive
@@ -100,7 +102,7 @@ function Header() {
         >
           <HomeActive className={styles.active_icon} />
           <Home className={styles.icon} />
-        </NavLink>
+        </NavLink> */}
 
         <NavLink
           to="/friends"
@@ -131,7 +133,7 @@ function Header() {
             </div>
           )}
         </NavLink>
-        <Link to="/" className={`${styles.middle_icon} hover1`}>
+        {/* <Link to="/" className={`${styles.middle_icon} hover1`}>
           <Watch style={{ transform: "translateY(5px)" }} color={color} />
           <div
             style={{ transform: "translateY(3px)" }}
@@ -139,7 +141,7 @@ function Header() {
           >
             9+
           </div>
-        </Link>
+        </Link> */}
         {/* <Link to="/" className={`${styles.middle_icon} hover1`}>
           <Market color={color} />
         </Link>
@@ -185,7 +187,8 @@ function Header() {
               : styles.circle_icon
           }
         >
-          <Messenger className={styles.icon} />
+          {/* <Messenger className={styles.icon} /> */}
+          <AiFillMessage size={20} className={styles.icon} />
           {user?.unseenMessages > 0 && (
             <div
               style={{
@@ -208,7 +211,8 @@ function Header() {
               setShowNotificationMenu((prev) => !prev);
             }}
           >
-            <Notifications />
+            {/* <Notifications /> */}
+            <RiNotificationBadgeFill size={20} className={styles.icon} />
             {user?.unseenNotification > 0 && (
               <div
                 style={{

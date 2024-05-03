@@ -246,14 +246,14 @@ function Profile() {
                   </div>
                 ) : (
                   <div className={classes.btns}>
-                    <button className="btn_blue">
+                    {/* <button className="btn_blue">
                       <img
                         src="../../../icons/plus.png"
                         alt=""
                         className="invert"
                       />
                       <span style={{ color: "#fff" }}>Add to story</span>
-                    </button>
+                    </button> */}
                     <button
                       className="gray_btn"
                       onClick={() => setShowEdit(true)}
@@ -279,9 +279,9 @@ function Profile() {
             </div>
           </div>
 
-          <div className="line"></div>
+          {/* <div className="line"></div> */}
 
-          <ProfileMenu />
+          {/* <ProfileMenu /> */}
         </div>
       </div>
       <div className={classes.bottom}>

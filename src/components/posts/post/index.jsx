@@ -331,25 +331,7 @@ function Post({ post }) {
           </>
         )}
       </div>
-      <div className={classes.footer}>
-        <div className={classes.infos}>
-          <div
-            className={classes.left}
-            onClick={() => setShowLikes((perv) => !perv)}
-          >
-            <div className={classes.reacts_view}>
-              {reactView.map((react, i) => (
-                <img src={`../../../reacts/${react}.svg`} alt="" key={i} />
-              ))}
-            </div>
-            <span>{reactions?.totalCount > 0 && reactions?.totalCount}</span>
-          </div>
-          <div className={classes.right}>
-            <span>{commentsCount} comments</span>
-            <span>{sharesCount} shares</span>
-          </div>
-        </div>
-        <div className={classes.actions}>
+      <div className={classes.actions}>
           {showReact && (
             <Portal id="reactPopper">
               <div
@@ -449,6 +431,26 @@ function Post({ post }) {
             </>
           )}
         </div>
+        
+      <div className={classes.footer}>
+        <div className={classes.infos}>
+          <div
+            className={classes.left}
+            onClick={() => setShowLikes((perv) => !perv)}
+          >
+            <div className={classes.reacts_view}>
+              {reactView.map((react, i) => (
+                <img src={`../../../reacts/${react}.svg`} alt="" key={i} />
+              ))}
+            </div>
+            <span>{reactions?.totalCount > 0 && reactions?.totalCount}</span>
+          </div>
+          <div className={classes.right}>
+            <span>{commentsCount} comments</span>
+            <span>{sharesCount} shares</span>
+          </div>
+        </div>
+        
       </div>
 
       <div className={classes.create_comment}>
