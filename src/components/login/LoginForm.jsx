@@ -105,7 +105,7 @@ function LoginForm({ setRenderSignUp }) {
                 <button type="submit" className="btn_blue" disabled={loading}>
                   Log in
                 </button>
-                <button
+                {/* <button
                   style={{ width: "100%", marginTop: "10px" }}
                   className="gray_btn"
                   type="button"
@@ -118,7 +118,7 @@ function LoginForm({ setRenderSignUp }) {
                   }}
                 >
                   Login With Guest Account
-                </button>
+                </button> */}
               </Form>
             )}
           </Formik>
@@ -133,11 +133,11 @@ function LoginForm({ setRenderSignUp }) {
             Create New Account
           </button>
         </Card>
-        <div className={styles.extra}>
+        {/* <div className={styles.extra}>
           <span>
             <b>Create a Page</b> for a celebrity, brand or business.
           </span>
-        </div>
+        </div> */}
       </div>
     </main>
   );

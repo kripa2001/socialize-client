@@ -16,7 +16,7 @@ function Login() {
             setRenderSignUp={setRenderSignUp}
           />
         )}
-        <LoginFooter />
+        {/* <LoginFooter /> */}
       </div>
     </div>
   );
