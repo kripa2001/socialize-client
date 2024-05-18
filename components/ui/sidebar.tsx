@@ -24,9 +24,9 @@ const Sidebar = () => {
       <NavLinks text="Explore" URL="/explore">
         <BiSearchAlt />
       </NavLinks>
-      <NavLinks text="Notifications" URL="/notifications">
+      {/* <NavLinks text="Notifications" URL="/notifications">
         <BiBell />
-      </NavLinks>
+      </NavLinks> */}
       <NavLinks text="Chats" URL="/chats">
         <BsChatDots />
       </NavLinks>
